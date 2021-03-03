@@ -15,7 +15,6 @@ public class STest5 extends Driver {
         browsers.set(browser);
         driver = Driver.getDriver();
         driver.get("http://www.google.com");
-        System.out.println(numbers.get());
 
         Driver.quitDriver();
 
