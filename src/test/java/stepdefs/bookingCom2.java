@@ -2,6 +2,7 @@ package stepdefs;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
@@ -32,7 +33,6 @@ public class bookingCom2 {
 
 
     public void clickLang(int i){
-
         ElementsCollection langArr = $$(languages);
         langArr.get(i).find("a").click();
     }

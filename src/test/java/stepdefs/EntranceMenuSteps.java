@@ -24,7 +24,7 @@ public class EntranceMenuSteps extends SiteMethods implements Locators {
 
     @Given("user on homepage")
     public void userOnHomepage() {
-        Configuration.holdBrowserOpen = true;
+        //Configuration.holdBrowserOpen = true;
         open(url);
         cookies(CookieChoice.accept);
 
