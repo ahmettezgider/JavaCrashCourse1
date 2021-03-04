@@ -2,7 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import utils.DriverStatic;
+import utils.DriverSingleton;
 import utils.Locators;
 
 public class STest2 implements Locators {
@@ -12,10 +12,10 @@ public class STest2 implements Locators {
     @Test
     public void test2(){
 
-        driver = DriverStatic.getDriver();
+        driver = DriverSingleton.getDriver();
         driver.get(url);
 
-        driver = DriverStatic.getDriver();
+        driver = DriverSingleton.getDriver();
         driver.get(url);
 
     }

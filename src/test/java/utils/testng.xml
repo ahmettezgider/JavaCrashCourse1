@@ -14,7 +14,7 @@
         </classes>
     </test>
 
-    <test verbose="2" preserve-order="true" name="firefoxTest">
+    <test verbose="2" preserve-order="true" name="internetExplorer">
         <parameter name="browser" value="ie"/>
         <classes>
             <class name="pages.STest5"/>

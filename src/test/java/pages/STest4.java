@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
-import utils.DriverStatic;
+import utils.DriverSingleton;
 import utils.Locators;
 
 public class STest4 extends BaseClass implements Locators {
@@ -19,7 +19,7 @@ public class STest4 extends BaseClass implements Locators {
         WebElement e = wait.until(ExpectedConditions.elementToBeClickable(entranceMenuToggleButton));
         e.click();
         bekle(2000);
-        DriverStatic.quitDriver();
+        DriverSingleton.quitDriver();
 
 
 
