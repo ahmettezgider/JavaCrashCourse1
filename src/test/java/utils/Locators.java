@@ -14,7 +14,7 @@ public interface Locators {
     By buttonGotoEntrance = By.cssSelector("div.region-picker a");
     By buttonSelectLanguage = By.cssSelector("div.region-picker button");
     By listOfLanguages = By.cssSelector("div.menu li");
-
+    By ikeaMenuLinks = By.cssSelector("div.menu a");
 
     HashMap<String, String> siteLangs = new HashMap<String, String>(){{
         put("ENGLISH", "en");
