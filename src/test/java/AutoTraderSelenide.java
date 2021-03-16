@@ -1,8 +1,10 @@
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -17,6 +19,7 @@ public class AutoTraderSelenide {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-blink-features=AutomationControlled");
+
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         Configuration.browserCapabilities = capabilities;
     }
@@ -34,6 +37,7 @@ public class AutoTraderSelenide {
     public void testPart1(){
         Configuration.startMaximized = true;
         open(url);
+        Selenide.clearBrowserCookies();
         $(byMake).shouldBe(Condition.enabled);
         $(browseByStyle).shouldBe(Condition.enabled);
         $(advancedSearch1).shouldBe(Condition.enabled);
@@ -52,6 +56,7 @@ public class AutoTraderSelenide {
     By aracSecimSelecti = By.cssSelector("select[id='1970425032']");
     By searchBtn = By.xpath("//button[@class='btn btn-primary btn-block']");
     By searchlist = By.cssSelector("h2[data-cmp='subheading']");
+
 
     @Test(dependsOnMethods = "testPart1")
     public void testPart2(){
